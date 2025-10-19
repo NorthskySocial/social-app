@@ -39,8 +39,8 @@ export const PrivacyPolicyScreen = (_props: Props) => {
               The Privacy Policy has been moved to{' '}
               <TextLink
                 style={pal.link}
-                href="https://deer.social/about/privacy"
-                text="deer.social/about/privacy"
+                href="https://northskysocial.com/posts/privacy-policy"
+                text="northskysocial.com/posts/privacy-policy"
               />
             </Trans>
           </Text>

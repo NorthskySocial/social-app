@@ -75,7 +75,7 @@ export function AboutSettingsScreen({}: Props) {
       <Layout.Content>
         <SettingsList.Container>
           <SettingsList.LinkItem
-            to="https://deer.social/about/tos"
+            to="https://northskysocial.com/posts/terms-of-service"
             label={_(msg`Terms of Service`)}>
             <SettingsList.ItemIcon icon={NewspaperIcon} />
             <SettingsList.ItemText>
@@ -83,7 +83,7 @@ export function AboutSettingsScreen({}: Props) {
             </SettingsList.ItemText>
           </SettingsList.LinkItem>
           <SettingsList.LinkItem
-            to="https://deer.social/about/privacy"
+            to="https://northskysocial.com/posts/privacy-policy"
             label={_(msg`Privacy Policy`)}>
             <SettingsList.ItemIcon icon={NewspaperIcon} />
             <SettingsList.ItemText>
