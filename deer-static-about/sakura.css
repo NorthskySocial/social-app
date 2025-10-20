@@ -16,7 +16,7 @@ body {
   max-width: 38em;
   margin: auto;
   color: #4a4a4a;
-  background-color: #f9f9f9;
+  background-color: #1F0B35;
   padding: 13px;
 }
 
@@ -134,7 +134,7 @@ blockquote {
   padding-right: 0.8em;
   border-left: 5px solid #1d7484;
   margin-bottom: 2.5rem;
-  background-color: #f1f1f1;
+  background-color: #1F0B35;
 }
 
 blockquote p {
@@ -151,7 +151,7 @@ video {
 
 /* Pre and Code */
 pre {
-  background-color: #f1f1f1;
+  background-color: #1F0B35;
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -165,7 +165,7 @@ kbd,
 samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
+  background-color: #1F0B35;
   white-space: pre-wrap;
 }
 
@@ -215,7 +215,7 @@ input[type='file']::file-selector-button {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #1d7484;
+  background-color: #1F0B35;
   color: #f9f9f9;
   border-radius: 1px;
   border: 1px solid #1d7484;
@@ -237,7 +237,7 @@ input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
 input[type='file']::file-selector-button:hover {
-  background-color: #982c61;
+  background-color: #1F0B35;
   color: #f9f9f9;
   outline: 0;
 }
@@ -257,7 +257,7 @@ input {
   color: #4a4a4a;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #f1f1f1;
+  background-color: #1F0B35;
   border: 1px solid #f1f1f1;
   border-radius: 4px;
   box-shadow: none;

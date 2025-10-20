@@ -392,7 +392,7 @@ function VideoEmbed({content}: {content: AppBskyEmbedVideo.View}) {
         alt={content.alt}
         className="object-cover size-full"
       />
-      <div className="size-24 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/50 flex items-center justify-center">
+  <div className="size-24 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgba(31,11,53,0.5)] flex items-center justify-center">
         <img src={playIcon} className="object-cover size-3/5" />
       </div>
     </div>

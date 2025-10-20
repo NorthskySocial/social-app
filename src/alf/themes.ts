@@ -19,29 +19,11 @@ const themes = createThemes({
 /**
  * @deprecated use ALF and access palette from `useTheme()`
  */
-export const lightPalette = themes.lightPalette
-/**
- * @deprecated use ALF and access palette from `useTheme()`
- */
-export const darkPalette = themes.darkPalette
-/**
- * @deprecated use ALF and access palette from `useTheme()`
- */
-export const dimPalette = themes.dimPalette
-/**
- * @deprecated use ALF and access theme from `useTheme()`
- */
-export const light = themes.light
-/**
- * @deprecated use ALF and access theme from `useTheme()`
- */
-export const dark = themes.dark
-/**
- * @deprecated use ALF and access theme from `useTheme()`
- */
-export const dim = themes.dim
 
-export const defaultTheme = themes.light
+export const darkPalette = themes.darkPalette
+export const dark = themes.dark
+
+export const defaultTheme = themes.dark
 
 export function createThemes({
   hues,
@@ -79,19 +61,19 @@ export function createThemes({
     gray_975: `hsl(${hues.primary}, 28%, ${defaultScale[1]}%)`,
     gray_1000: `hsl(${hues.primary}, 28%, ${defaultScale[0]}%)`,
 
-    primary_25: `hsl(145, 30%, 97%)`,
-    primary_50: `hsl(145, 30%, 95%)`,
-    primary_100: `hsl(145, 30%, 90%)`,
-    primary_200: `hsl(145, 32%, 80%)`,
-    primary_300: `hsl(145, 34%, 70%)`,
-    primary_400: `hsl(145, 35%, 58%)`,
-    primary_500: `hsl(145, 35%, 45%)`,
-    primary_600: `hsl(145, 38%, 38%)`,
-    primary_700: `hsl(145, 40%, 32%)`,
-    primary_800: `hsl(145, 42%, 25%)`,
-    primary_900: `hsl(145, 45%, 18%)`,
-    primary_950: `hsl(145, 48%, 10%)`,
-    primary_975: `hsl(145, 50%, 7%)`,
+    primary_25: '#2AFFBA',
+    primary_50: '#33F0BE',
+    primary_100: '#3CE0C2',
+    primary_200: '#46D0C7',
+    primary_300: '#51BFCB',
+    primary_400: '#5CAED0',
+    primary_500: '#6899D6',
+    primary_600: '#7484DB',
+    primary_700: '#836CE1',
+    primary_800: '#9154E8',
+    primary_900: '#863BCE',
+    primary_950: '#522381',
+    primary_975: '#1F0B35',
 
     green_25: `hsl(${hues.positive}, 82%, 97%)`,
     green_50: `hsl(${hues.positive}, 82%, 95%)`,
@@ -265,19 +247,19 @@ export function createThemes({
     contrast_950: `hsl(${hues.primary}, 20%, ${dimScale[12]}%)`,
     contrast_975: `hsl(${hues.primary}, 20%, ${dimScale[13]}%)`,
 
-    primary_25: `hsl(140, 15%, ${dimScale[1]}%)`,
-    primary_50: `hsl(140, 18%, ${dimScale[2]}%)`,
-    primary_100: `hsl(140, 22%, ${dimScale[3]}%)`,
-    primary_200: `hsl(140, 25%, ${dimScale[4]}%)`,
-    primary_300: `hsl(140, 28%, ${dimScale[5]}%)`,
-    primary_400: `hsl(140, 32%, ${dimScale[6]}%)`,
-    primary_500: `hsl(140, 35%, ${dimScale[7]}%)`,
-    primary_600: `hsl(140, 38%, ${dimScale[8]}%)`,
-    primary_700: `hsl(140, 42%, ${dimScale[9]}%)`,
-    primary_800: `hsl(140, 45%, ${dimScale[10]}%)`,
-    primary_900: `hsl(140, 48%, ${dimScale[11]}%)`,
-    primary_950: `hsl(140, 50%, ${dimScale[12]}%)`,
-    primary_975: `hsl(140, 55%, ${dimScale[13]}%)`,
+    primary_25: '#2AFFBA',
+    primary_50: '#33F0BE',
+    primary_100: '#3CE0C2',
+    primary_200: '#46D0C7',
+    primary_300: '#51BFCB',
+    primary_400: '#5CAED0',
+    primary_500: '#6899D6',
+    primary_600: '#7484DB',
+    primary_700: '#836CE1',
+    primary_800: '#9154E8',
+    primary_900: '#863BCE',
+    primary_950: '#522381',
+    primary_975: '#1F0B35',
 
     positive_25: `hsl(${hues.positive}, 50%, ${dimScale[1]}%)`,
     positive_50: `hsl(${hues.positive}, 60%, ${dimScale[2]}%)`,
@@ -329,46 +311,49 @@ export function createThemes({
         color: lightPalette.white,
       },
       bg: {
-        backgroundColor: lightPalette.white,
+        backgroundColor: '#1F0B35',
       },
       bg_contrast_25: {
-        backgroundColor: lightPalette.contrast_25,
+        backgroundColor: '#1B072F',
+      },
+      bg_hover: {
+        backgroundColor: '#1B072F',
       },
       bg_contrast_50: {
-        backgroundColor: lightPalette.contrast_50,
+        backgroundColor: '#17062A',
       },
       bg_contrast_100: {
-        backgroundColor: lightPalette.contrast_100,
+        backgroundColor: '#130425',
       },
       bg_contrast_200: {
-        backgroundColor: lightPalette.contrast_200,
+        backgroundColor: '#100320',
       },
       bg_contrast_300: {
-        backgroundColor: lightPalette.contrast_300,
+        backgroundColor: '#0D021D',
       },
       bg_contrast_400: {
-        backgroundColor: lightPalette.contrast_400,
+        backgroundColor: '#0A0118',
       },
       bg_contrast_500: {
-        backgroundColor: lightPalette.contrast_500,
+        backgroundColor: '#070113',
       },
       bg_contrast_600: {
-        backgroundColor: lightPalette.contrast_600,
+        backgroundColor: '#05010E',
       },
       bg_contrast_700: {
-        backgroundColor: lightPalette.contrast_700,
+        backgroundColor: '#03010A',
       },
       bg_contrast_800: {
-        backgroundColor: lightPalette.contrast_800,
+        backgroundColor: '#020105',
       },
       bg_contrast_900: {
-        backgroundColor: lightPalette.contrast_900,
+        backgroundColor: '#010102',
       },
       bg_contrast_950: {
-        backgroundColor: lightPalette.contrast_950,
+        backgroundColor: '#000001',
       },
       bg_contrast_975: {
-        backgroundColor: lightPalette.contrast_975,
+        backgroundColor: '#000000',
       },
       border_contrast_low: {
         borderColor: lightPalette.contrast_100,
@@ -415,46 +400,50 @@ export function createThemes({
         color: darkPalette.black,
       },
       bg: {
-        backgroundColor: darkPalette.black,
+        backgroundColor: '#1F0B35',
       },
       bg_contrast_25: {
-        backgroundColor: darkPalette.contrast_25,
+        backgroundColor: '#1A062E',
+      },
+      // standardized hover background
+      bg_hover: {
+        backgroundColor: '#1A062E',
       },
       bg_contrast_50: {
-        backgroundColor: darkPalette.contrast_50,
+        backgroundColor: '#160528',
       },
       bg_contrast_100: {
-        backgroundColor: darkPalette.contrast_100,
+        backgroundColor: '#120423',
       },
       bg_contrast_200: {
-        backgroundColor: darkPalette.contrast_200,
+        backgroundColor: '#0F031E',
       },
       bg_contrast_300: {
-        backgroundColor: darkPalette.contrast_300,
+        backgroundColor: '#0C021A',
       },
       bg_contrast_400: {
-        backgroundColor: darkPalette.contrast_400,
+        backgroundColor: '#090115',
       },
       bg_contrast_500: {
-        backgroundColor: darkPalette.contrast_500,
+        backgroundColor: '#060110',
       },
       bg_contrast_600: {
-        backgroundColor: darkPalette.contrast_600,
+        backgroundColor: '#04010B',
       },
       bg_contrast_700: {
-        backgroundColor: darkPalette.contrast_700,
+        backgroundColor: '#030108',
       },
       bg_contrast_800: {
-        backgroundColor: darkPalette.contrast_800,
+        backgroundColor: '#020104',
       },
       bg_contrast_900: {
-        backgroundColor: darkPalette.contrast_900,
+        backgroundColor: '#010101',
       },
       bg_contrast_950: {
-        backgroundColor: darkPalette.contrast_950,
+        backgroundColor: '#000001',
       },
       bg_contrast_975: {
-        backgroundColor: darkPalette.contrast_975,
+        backgroundColor: '#000000',
       },
       border_contrast_low: {
         borderColor: darkPalette.contrast_100,
@@ -506,46 +495,50 @@ export function createThemes({
         color: dimPalette.black,
       },
       bg: {
-        backgroundColor: dimPalette.black,
+        backgroundColor: '#1F0B35',
       },
       bg_contrast_25: {
-        backgroundColor: dimPalette.contrast_25,
+        backgroundColor: '#1A052D',
+      },
+      // standardized hover background
+      bg_hover: {
+        backgroundColor: '#1A052D',
       },
       bg_contrast_50: {
-        backgroundColor: dimPalette.contrast_50,
+        backgroundColor: '#150527',
       },
       bg_contrast_100: {
-        backgroundColor: dimPalette.contrast_100,
+        backgroundColor: '#110422',
       },
       bg_contrast_200: {
-        backgroundColor: dimPalette.contrast_200,
+        backgroundColor: '#0E031D',
       },
       bg_contrast_300: {
-        backgroundColor: dimPalette.contrast_300,
+        backgroundColor: '#0B0218',
       },
       bg_contrast_400: {
-        backgroundColor: dimPalette.contrast_400,
+        backgroundColor: '#080114',
       },
       bg_contrast_500: {
-        backgroundColor: dimPalette.contrast_500,
+        backgroundColor: '#06010F',
       },
       bg_contrast_600: {
-        backgroundColor: dimPalette.contrast_600,
+        backgroundColor: '#04010A',
       },
       bg_contrast_700: {
-        backgroundColor: dimPalette.contrast_700,
+        backgroundColor: '#030107',
       },
       bg_contrast_800: {
-        backgroundColor: dimPalette.contrast_800,
+        backgroundColor: '#020103',
       },
       bg_contrast_900: {
-        backgroundColor: dimPalette.contrast_900,
+        backgroundColor: '#010101',
       },
       bg_contrast_950: {
-        backgroundColor: dimPalette.contrast_950,
+        backgroundColor: '#000001',
       },
       bg_contrast_975: {
-        backgroundColor: dimPalette.contrast_975,
+        backgroundColor: '#000000',
       },
       border_contrast_low: {
         borderColor: dimPalette.contrast_100,

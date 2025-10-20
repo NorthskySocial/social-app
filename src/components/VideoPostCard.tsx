@@ -147,7 +147,7 @@ export function VideoPostCard({
               a.rounded_md,
               a.overflow_hidden,
               {
-                backgroundColor: black,
+                backgroundColor: '#1F0B35',
                 aspectRatio: 9 / 16,
               },
             ]}>
@@ -167,7 +167,7 @@ export function VideoPostCard({
                   a.justify_center,
                   a.align_center,
                   {
-                    backgroundColor: 'black',
+                    backgroundColor: '#1F0B35',
                     opacity: 0.2,
                   },
                 ]}
@@ -262,7 +262,7 @@ export function VideoPostCardPlaceholder() {
           a.rounded_md,
           a.overflow_hidden,
           {
-            backgroundColor: black,
+            backgroundColor: '#1F0B35',
             aspectRatio: 9 / 16,
           },
         ]}>
@@ -443,7 +443,7 @@ export function CompactVideoPostCard({
                   a.justify_center,
                   a.align_center,
                   {
-                    backgroundColor: 'black',
+                    backgroundColor: '#1F0B35',
                     opacity: 0.2,
                   },
                 ]}

@@ -37,11 +37,12 @@
       font-display: swap;
     }
     html {
-      background-color: white;
+  background-color: #1F0B35;
+  background-attachment: fixed;
     }
     @media (prefers-color-scheme: dark) {
       html {
-        background-color: black;
+  background-color: #1F0B35;
       }
     }
     html,
@@ -63,8 +64,14 @@
     #root {
       display: flex;
       flex: 1 0 auto;
-      min-height: 100%;
+      min-height: 100vh;
+      height: 100%;
       width: 100%;
+    }
+
+    body {
+      background-color: #1F0B35;
+      background-attachment: fixed;
     }
     #splash {
       position: fixed;

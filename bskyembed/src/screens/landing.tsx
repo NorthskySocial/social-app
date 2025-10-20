@@ -147,7 +147,7 @@ function LandingPage() {
               }
             }}
             id="colorModeSelect"
-            className="appearance-none bg-white border w-full rounded-lg text-sm px-3 py-2 dark:bg-dimmedBg dark:border-slate-500">
+            className="appearance-none bg-[#1F0B35] border w-full rounded-lg text-sm px-3 py-2 dark:bg-dimmedBg dark:border-slate-500">
             <option value="system">System</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
@@ -272,7 +272,7 @@ function Snippet({
         }}
       />
       <button
-        className="rounded-lg bg-brand text-white py-3 px-4 whitespace-nowrap min-w-28"
+  className="rounded-lg bg-[#1F0B35] text-white py-3 px-4 whitespace-nowrap min-w-28"
         onClick={() => {
           ref.current?.focus()
           ref.current?.select()

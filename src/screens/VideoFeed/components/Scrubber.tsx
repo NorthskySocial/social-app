@@ -217,14 +217,14 @@ export function Scrubber({
             <Animated.View
               style={[
                 a.w_full,
-                {backgroundColor: 'white', opacity: 0.2},
+                {backgroundColor: '#1F0B35', opacity: 0.2},
                 trackStyle,
               ]}
             />
             <Animated.View
               style={[
                 a.absolute,
-                {top: 0, left: 0, backgroundColor: 'white'},
+                {top: 0, left: 0, backgroundColor: '#1F0B35'},
                 barStyle,
               ]}
             />

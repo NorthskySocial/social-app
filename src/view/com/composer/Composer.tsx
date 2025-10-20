@@ -1435,7 +1435,7 @@ function useScrollTracker({
       borderColor: interpolateColor(
         hasScrolledToTop.get(),
         [0, 1],
-        [t.atoms.border_contrast_medium.borderColor, 'transparent'],
+        [t.atoms.border_contrast_medium.borderColor, '#1F0B35'],
       ),
     }
   })
@@ -1445,7 +1445,7 @@ function useScrollTracker({
       borderColor: interpolateColor(
         hasScrolledToBottom.get(),
         [0, 1],
-        [t.atoms.border_contrast_medium.borderColor, 'transparent'],
+        [t.atoms.border_contrast_medium.borderColor, '#1F0B35'],
       ),
     }
   })

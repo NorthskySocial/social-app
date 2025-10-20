@@ -8,7 +8,7 @@ export type ViewStyleProp = {
   style?: StyleProp<ViewStyle>
 }
 
-export type ThemeName = 'light' | 'dim' | 'dark'
+export type ThemeName = 'dark'
 export type Palette = {
   white: string
   black: string
@@ -157,7 +157,7 @@ export type ThemedAtoms = {
   }
 }
 export type Theme = {
-  scheme: 'light' | 'dark' // for library support
+  scheme: 'dark'
   name: ThemeName
   palette: Palette
   atoms: ThemedAtoms

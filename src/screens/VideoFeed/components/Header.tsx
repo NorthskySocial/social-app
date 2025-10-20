@@ -23,12 +23,12 @@ export function HeaderPlaceholder() {
       <View
         style={[
           a.rounded_sm,
-          {
-            width: 36,
-            height: 36,
-            backgroundColor: 'white',
-            opacity: 0.8,
-          },
+            {
+              width: 36,
+              height: 36,
+              backgroundColor: '#1F0B35',
+              opacity: 0.8,
+            },
         ]}
       />
 
@@ -38,7 +38,7 @@ export function HeaderPlaceholder() {
             a.w_full,
             a.rounded_xs,
             {
-              backgroundColor: 'white',
+              backgroundColor: '#1F0B35',
               height: 14,
               width: 80,
               opacity: 0.8,
@@ -50,7 +50,7 @@ export function HeaderPlaceholder() {
             a.w_full,
             a.rounded_xs,
             {
-              backgroundColor: 'white',
+              backgroundColor: '#1F0B35',
               height: 10,
               width: 140,
               opacity: 0.6,

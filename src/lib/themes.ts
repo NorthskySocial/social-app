@@ -1,39 +1,39 @@
 import {Platform} from 'react-native'
 
 import {tokens} from '#/alf'
-import {darkPalette, dimPalette, lightPalette} from '#/alf/themes'
+import {darkPalette} from '#/alf/themes'
 import {fontWeight} from '#/alf/tokens'
 import {colors} from './styles'
 import type {Theme} from './ThemeContext'
 
 export const defaultTheme: Theme = {
-  colorScheme: 'light',
+  colorScheme: 'dark',
   palette: {
     default: {
-      background: lightPalette.white,
-      backgroundLight: lightPalette.contrast_25,
-      text: lightPalette.black,
-      textLight: lightPalette.contrast_700,
-      textInverted: lightPalette.white,
-      link: lightPalette.primary_500,
-      border: lightPalette.contrast_100,
-      borderDark: lightPalette.contrast_200,
-      icon: lightPalette.contrast_500,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
+      text: darkPalette.white,
+      textLight: darkPalette.contrast_700,
+      textInverted: darkPalette.black,
+      link: darkPalette.primary_500,
+      border: darkPalette.contrast_100,
+      borderDark: darkPalette.contrast_200,
+      icon: darkPalette.contrast_500,
 
       // non-standard
-      textVeryLight: lightPalette.contrast_400,
-      replyLine: lightPalette.contrast_100,
-      replyLineDot: lightPalette.contrast_200,
-      unreadNotifBg: lightPalette.primary_25,
-      unreadNotifBorder: lightPalette.primary_100,
-      postCtrl: lightPalette.contrast_500,
-      brandText: lightPalette.primary_500,
-      emptyStateIcon: lightPalette.contrast_300,
-      borderLinkHover: lightPalette.contrast_300,
+    textVeryLight: darkPalette.contrast_400,
+    replyLine: darkPalette.contrast_100,
+    replyLineDot: darkPalette.contrast_200,
+    unreadNotifBg: darkPalette.primary_25,
+    unreadNotifBorder: darkPalette.primary_100,
+    postCtrl: darkPalette.contrast_500,
+    brandText: darkPalette.primary_500,
+    emptyStateIcon: darkPalette.contrast_300,
+    borderLinkHover: darkPalette.contrast_300,
     },
     primary: {
-      background: colors.blue3,
-      backgroundLight: colors.blue2,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
       text: colors.white,
       textLight: colors.blue0,
       textInverted: colors.blue3,
@@ -43,8 +43,8 @@ export const defaultTheme: Theme = {
       icon: colors.blue4,
     },
     secondary: {
-      background: colors.green3,
-      backgroundLight: colors.green2,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
       text: colors.white,
       textLight: colors.green1,
       textInverted: colors.green4,
@@ -54,8 +54,8 @@ export const defaultTheme: Theme = {
       icon: colors.green4,
     },
     inverted: {
-      background: darkPalette.black,
-      backgroundLight: darkPalette.contrast_50,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
       text: darkPalette.white,
       textLight: darkPalette.contrast_700,
       textInverted: darkPalette.black,
@@ -65,8 +65,8 @@ export const defaultTheme: Theme = {
       icon: darkPalette.contrast_500,
     },
     error: {
-      background: colors.red3,
-      backgroundLight: colors.red2,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
       text: colors.white,
       textLight: colors.red1,
       textInverted: colors.red3,
@@ -296,8 +296,8 @@ export const darkTheme: Theme = {
   palette: {
     ...defaultTheme.palette,
     default: {
-      background: darkPalette.black,
-      backgroundLight: darkPalette.contrast_25,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
       text: darkPalette.white,
       textLight: darkPalette.contrast_600,
       textInverted: darkPalette.black,
@@ -307,15 +307,15 @@ export const darkTheme: Theme = {
       icon: darkPalette.contrast_500,
 
       // non-standard
-      textVeryLight: darkPalette.contrast_400,
-      replyLine: darkPalette.contrast_200,
-      replyLineDot: darkPalette.contrast_200,
-      unreadNotifBg: darkPalette.primary_25,
-      unreadNotifBorder: darkPalette.primary_100,
-      postCtrl: darkPalette.contrast_500,
-      brandText: darkPalette.primary_500,
-      emptyStateIcon: darkPalette.contrast_300,
-      borderLinkHover: darkPalette.contrast_300,
+    textVeryLight: darkPalette.contrast_400,
+    replyLine: darkPalette.contrast_200,
+    replyLineDot: darkPalette.contrast_200,
+    unreadNotifBg: darkPalette.primary_25,
+    unreadNotifBorder: darkPalette.primary_100,
+    postCtrl: darkPalette.contrast_500,
+    brandText: darkPalette.primary_500,
+    emptyStateIcon: darkPalette.contrast_300,
+    borderLinkHover: darkPalette.contrast_300,
     },
     primary: {
       ...defaultTheme.palette.primary,
@@ -326,45 +326,23 @@ export const darkTheme: Theme = {
       textInverted: colors.green2,
     },
     inverted: {
-      background: darkPalette.white,
-      backgroundLight: lightPalette.contrast_50,
-      text: lightPalette.black,
-      textLight: lightPalette.contrast_700,
+      background: '#1F0B35',
+      backgroundLight: '#1F0B35',
+      text: darkPalette.black,
+      textLight: darkPalette.contrast_700,
       textInverted: darkPalette.white,
-      link: lightPalette.primary_500,
-      border: lightPalette.contrast_100,
-      borderDark: lightPalette.contrast_200,
-      icon: lightPalette.contrast_500,
+      link: darkPalette.primary_500,
+      border: darkPalette.contrast_100,
+      borderDark: darkPalette.contrast_200,
+      icon: darkPalette.contrast_500,
     },
   },
 }
 
 export const dimTheme: Theme = {
   ...darkTheme,
+  // Keep dimTheme alias for compatibility but use dark palette values
   palette: {
     ...darkTheme.palette,
-    default: {
-      ...darkTheme.palette.default,
-      background: dimPalette.black,
-      backgroundLight: dimPalette.contrast_25,
-      text: dimPalette.white,
-      textLight: dimPalette.contrast_700,
-      textInverted: dimPalette.black,
-      link: dimPalette.primary_500,
-      border: dimPalette.contrast_100,
-      borderDark: dimPalette.contrast_200,
-      icon: dimPalette.contrast_500,
-
-      // non-standard
-      textVeryLight: dimPalette.contrast_400,
-      replyLine: dimPalette.contrast_200,
-      replyLineDot: dimPalette.contrast_200,
-      unreadNotifBg: dimPalette.primary_25,
-      unreadNotifBorder: dimPalette.primary_100,
-      postCtrl: dimPalette.contrast_500,
-      brandText: dimPalette.primary_500,
-      emptyStateIcon: dimPalette.contrast_300,
-      borderLinkHover: dimPalette.contrast_300,
-    },
   },
 }

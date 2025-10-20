@@ -370,7 +370,8 @@ function createInterpolation({
   if (!firstThreshold) {
     return {
       inputRange: [0],
-      outputRange: ['transparent'],
+      // Ensure the non-action state matches the app background so reveals don't show other colors
+      outputRange: ['#1F0B35'],
     }
   }
 
@@ -385,22 +386,23 @@ function createInterpolation({
   }
 
   let res
-  if (secondThreshold) {
-    res = {
-      inputRange: [
-        0,
-        firstThreshold,
-        firstThreshold + offset - 20,
-        secondThreshold,
-      ],
-      outputRange: ['transparent', firstColor!, firstColor!, secondColor!],
+    if (secondThreshold) {
+      res = {
+        inputRange: [
+          0,
+          firstThreshold,
+          firstThreshold + offset - 20,
+          secondThreshold,
+        ],
+        // Replace transparent with app background so the swipe animation doesn't reveal a different color
+        outputRange: ['#1F0B35', firstColor!, firstColor!, secondColor!],
+      }
+    } else {
+      res = {
+        inputRange: [0, firstThreshold],
+        outputRange: ['#1F0B35', firstColor!],
+      }
     }
-  } else {
-    res = {
-      inputRange: [0, firstThreshold],
-      outputRange: ['transparent', firstColor!],
-    }
-  }
 
   if (side === 'left') {
     // Reverse the input/output ranges

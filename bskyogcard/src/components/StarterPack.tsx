@@ -51,7 +51,7 @@ export function StarterPack(props: {
         justifyContent: 'center',
         width: STARTERPACK_WIDTH,
         height: STARTERPACK_HEIGHT,
-        backgroundColor: 'black',
+  backgroundColor: '#1F0B35',
         color: 'white',
         fontFamily: 'Inter',
       }}>
@@ -85,7 +85,7 @@ export function StarterPack(props: {
             width: '100%',
             height: '100%',
             position: 'absolute',
-            backgroundImage: `linear-gradient(to bottom, ${GRADIENT_TOP}, ${GRADIENT_BOTTOM})`,
+            backgroundImage: `linear-gradient(to bottom, ${GRADIENT_TOP}, ${GRADIENT_BOTTOM.replace(/#fff/g, '#1F0B35')})`,
             opacity: 0.9,
           }}
         />

@@ -42,7 +42,7 @@ export function VideoPreview({
         a.rounded_sm,
         {aspectRatio},
         a.overflow_hidden,
-        {backgroundColor: 'black'},
+  {backgroundColor: '#1F0B35'},
         a.relative,
       ]}>
       <ExternalEmbedRemoveBtn onRemove={clear} />

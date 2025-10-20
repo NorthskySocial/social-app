@@ -112,7 +112,8 @@ function ShellInner() {
 }
 
 export const Shell: React.FC = function ShellImpl() {
-  const pageBg = useColorSchemeStyle(styles.bgLight, styles.bgDark)
+  const t = useTheme()
+  const pageBg = {backgroundColor: t.atoms.bg.backgroundColor}
   return (
     <View style={[a.util_screen_outer, pageBg]}>
       <RoutesContainer>

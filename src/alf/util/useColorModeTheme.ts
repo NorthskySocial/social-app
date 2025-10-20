@@ -1,41 +1,19 @@
 import React from 'react'
-import {ColorSchemeName, useColorScheme} from 'react-native'
-
 import {isWeb} from '#/platform/detection'
-import {useThemePrefs} from '#/state/shell'
-import {dark, dim, light} from '#/alf/themes'
+import {dark} from '#/alf/themes'
 import {ThemeName} from '#/alf/types'
 
 export function useColorModeTheme(): ThemeName {
-  const theme = useThemeName()
-
+  const theme: ThemeName = 'dark'
   React.useLayoutEffect(() => {
     updateDocument(theme)
-  }, [theme])
+  }, [])
 
   return theme
 }
 
 export function useThemeName(): ThemeName {
-  const colorScheme = useColorScheme()
-  const {colorMode, darkTheme} = useThemePrefs()
-
-  return getThemeName(colorScheme, colorMode, darkTheme)
-}
-
-function getThemeName(
-  colorScheme: ColorSchemeName,
-  colorMode: 'system' | 'light' | 'dark',
-  darkTheme?: ThemeName,
-) {
-  if (
-    (colorMode === 'system' && colorScheme === 'light') ||
-    colorMode === 'light'
-  ) {
-    return 'light'
-  } else {
-    return darkTheme ?? 'dim'
-  }
+  return 'dark'
 }
 
 function updateDocument(theme: ThemeName) {
@@ -46,21 +24,12 @@ function updateDocument(theme: ThemeName) {
     // @ts-ignore web only
     const meta = window.document.querySelector('meta[name="theme-color"]')
 
-    // remove any other color mode classes
-    html.className = html.className.replace(/(theme)--\w+/g, '')
-    html.classList.add(`theme--${theme}`)
-    // set color to 'theme-color' meta tag
-    meta?.setAttribute('content', getBackgroundColor(theme))
+    html.className = html.className.replace(/theme--\w+/g, '')
+    html.classList.add('theme--dark')
+    meta?.setAttribute('content', getBackgroundColor())
   }
 }
 
-export function getBackgroundColor(theme: ThemeName): string {
-  switch (theme) {
-    case 'light':
-      return light.atoms.bg.backgroundColor
-    case 'dark':
-      return dark.atoms.bg.backgroundColor
-    case 'dim':
-      return dim.atoms.bg.backgroundColor
-  }
+export function getBackgroundColor(): string {
+  return dark.atoms.bg.backgroundColor
 }

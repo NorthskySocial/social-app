@@ -131,7 +131,7 @@ export function VideoItem({
     return (
       <View
         style={[
-          {backgroundColor: 'black'},
+          {backgroundColor: '#1F0B35'},
           a.flex_1,
           {aspectRatio: 1, maxWidth: 100},
           a.justify_center,

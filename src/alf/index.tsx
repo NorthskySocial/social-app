@@ -43,7 +43,7 @@ export type Alf = {
  * Context
  */
 export const Context = React.createContext<Alf>({
-  themeName: 'light',
+  themeName: 'dark',
   theme: defaultTheme,
   themes: createThemes({
     hues: {
@@ -108,7 +108,7 @@ export function ThemeProvider({
     () => ({
       themes,
       themeName: themeName,
-      theme: themes[themeName],
+      theme: themes[themeName] || themes.dark,
       fonts: {
         scale: fontScale,
         scaleMultiplier: fontScaleMultiplier,

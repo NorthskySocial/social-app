@@ -80,7 +80,7 @@ function PwiOptOut({thread}: {thread: AppBskyFeedDefs.ThreadViewPost}) {
         </p>
         <Link
           href={href}
-          className="max-w-80 rounded-lg bg-brand text-white text-center py-1 px-4 w-full mx-auto">
+          className="max-w-80 rounded-lg bg-[#1F0B35] text-white text-center py-1 px-4 w-full mx-auto">
           View on Bluesky
         </Link>
       </div>

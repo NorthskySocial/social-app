@@ -44,13 +44,12 @@ export const QrCode = React.forwardRef<ViewShot, Props>(function QrCode(
     <LazyViewShot ref={ref}>
       <LinearGradientBackground
         style={[
-          {width: 300, minHeight: 390},
-          a.align_center,
-          a.px_sm,
+          a.rounded_sm,
           a.py_xl,
           a.rounded_sm,
           a.justify_between,
           a.gap_md,
+          {height: 225, width: 225, backgroundColor: '#1F0B35'},
         ]}>
         <View style={[a.gap_sm]}>
           <Text
@@ -103,7 +102,7 @@ export function QrCodeInner({link}: {link: string}) {
       data={link}
       style={[
         a.rounded_sm,
-        {height: 225, width: 225, backgroundColor: '#f3f3f3'},
+        {height: 225, width: 225, backgroundColor: '#1F0B35'},
       ]}
       pieceSize={isWeb ? 8 : 6}
       padding={20}

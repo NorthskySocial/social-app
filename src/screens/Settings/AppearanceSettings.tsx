@@ -94,44 +94,14 @@ export function AppearanceSettingsScreen({}: Props) {
               icon={PhoneIcon}
               items={[
                 {
-                  label: _(msg`System`),
-                  name: 'system',
-                },
-                {
-                  label: _(msg`Light`),
-                  name: 'light',
-                },
-                {
                   label: _(msg`Dark`),
                   name: 'dark',
                 },
               ]}
-              values={[colorMode]}
+              values={['dark']}
               onChange={onChangeAppearance}
             />
-
-            {colorMode !== 'light' && (
-              <Animated.View
-                entering={native(FadeInUp)}
-                exiting={native(FadeOutUp)}>
-                <AppearanceToggleButtonGroup
-                  title={_(msg`Dark theme`)}
-                  icon={MoonIcon}
-                  items={[
-                    {
-                      label: _(msg`Dim`),
-                      name: 'dim',
-                    },
-                    {
-                      label: _(msg`Dark`),
-                      name: 'dark',
-                    },
-                  ]}
-                  values={[darkTheme ?? 'dim']}
-                  onChange={onChangeDarkTheme}
-                />
-              </Animated.View>
-            )}
+            {/* Dark theme only — no additional controls */}
 
             <Animated.View layout={native(LinearTransition)}>
               <SettingsList.Divider />

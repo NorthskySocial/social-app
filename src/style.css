@@ -12,38 +12,25 @@
  * HTML & BODY STYLES IN `web/index.html` and `bskyweb/templates/base.html`
  */
 :root {
-  --text: black;
-  --background: white;
-  --backgroundLight: hsl(211, 20%, 95%);
+  --text: #ffffff;
+  --background: #1F0B35;
+  --backgroundLight: #1F0B35;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --text: white;
-    --background: black;
-    --backgroundLight: hsl(211, 20%, 20%);
+    --text: #ffffff;
+    --background: #1F0B35;
+    --backgroundLight: #1F0B35;
   }
 }
 
-html.theme--light {
-  --text: black;
-  --background: white;
-  --backgroundLight: hsl(211, 20%, 95%);
-  background-color: white;
-}
 html.theme--dark {
   color-scheme: dark;
-  background-color: black;
-  --text: white;
-  --background: black;
-  --backgroundLight: hsl(211, 20%, 20%);
-}
-html.theme--dim {
-  color-scheme: dark;
-  background-color: hsl(211, 28%, 12%);
-  --text: white;
-  --background: hsl(211, 20%, 4%);
-  --backgroundLight: hsl(211, 20%, 10%);
+  background-color: #1F0B35;
+  --text: #ffffff;
+  --background: #1F0B35;
+  --backgroundLight: #1F0B35;
 }
 
 /* Buttons and inputs have a font set by UA, so we'll have to reset that */
@@ -109,11 +96,11 @@ a[role='link'][data-no-underline='1']:hover {
   pointer-events: none;
 }
 .ProseMirror .mention {
-  color: rgb(75, 155, 108);
+  color: rgb(119, 128, 220);
 }
 .ProseMirror a,
 .ProseMirror .autolink {
-  color: rgb(75, 155, 108);
+  color: rgb(119, 128, 220);
 }
 /* OLLIE: TODO -- this is not accessible */
 /* Remove focus state on inputs */

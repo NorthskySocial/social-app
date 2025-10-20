@@ -41,8 +41,8 @@ export function VideoPreview({
         {aspectRatio},
         a.overflow_hidden,
         a.border,
-        t.atoms.border_contrast_low,
-        {backgroundColor: 'black'},
+  t.atoms.border_contrast_low,
+  {backgroundColor: '#1F0B35'},
       ]}>
       <View style={[a.absolute, a.inset_0]}>
         <VideoTranscodeBackdrop uri={asset.uri} />

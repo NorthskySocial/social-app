@@ -653,7 +653,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backdrop: {
-    backgroundColor: '#000',
+  backgroundColor: '#1F0B35',
     position: 'absolute',
     top: 0,
     bottom: 0,

@@ -345,7 +345,7 @@ const styles = StyleSheet.create({
   },
   menu: {
     position: 'absolute',
-    backgroundColor: '#fff',
+    backgroundColor: '#1F0B35',
     borderRadius: 14,
     paddingVertical: 6,
   },

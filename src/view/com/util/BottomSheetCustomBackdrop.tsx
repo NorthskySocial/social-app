@@ -26,7 +26,7 @@ export function createCustomBackdrop(
     }))
 
     const containerStyle = useMemo(
-      () => [style, {backgroundColor: '#000'}, opacity],
+      () => [style, {backgroundColor: '#1F0B35'}, opacity],
       [style, opacity],
     )
 

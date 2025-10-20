@@ -284,11 +284,11 @@ function Empty() {
             }
           }}
           style={{
-            backgroundColor: 'white',
-            borderColor: 'white',
+            backgroundColor: '#1F0B35',
+            borderColor: '#1F0B35',
             width: 100,
           }}
-          hoverStyle={[{backgroundColor: '#dfdfdf'}]}>
+          hoverStyle={[{backgroundColor: '#1F0B35'}]}>
           <ButtonText>
             <Trans>Create</Trans>
           </ButtonText>

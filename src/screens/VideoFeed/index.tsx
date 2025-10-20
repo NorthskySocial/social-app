@@ -139,7 +139,7 @@ export function VideoFeed({}: NativeStackScreenProps<
 
   return (
     <ThemeProvider theme="dark">
-      <Layout.Screen noInsetTop style={{backgroundColor: 'black'}}>
+  <Layout.Screen noInsetTop style={{backgroundColor: '#1F0B35'}}>
         <View
           style={[
             a.absolute,
