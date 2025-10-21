@@ -1,5 +1,10 @@
 FROM golang:1.23-bullseye AS build-env
 
+# Enable multi-platform builds
+ARG BUILDPLATFORM
+ARG TARGETPLATFORM
+ARG TARGETARCH
+
 WORKDIR /usr/src/social-app
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -15,7 +20,8 @@ ENV NVM_DIR=/usr/share/nvm
 #
 ENV GODEBUG="netdns=go"
 ENV GOOS="linux"
-ENV GOARCH="amd64"
+ARG TARGETARCH
+ENV GOARCH=${TARGETARCH:-amd64}
 ENV CGO_ENABLED=1
 ENV GOEXPERIMENT="loopvar"
 
@@ -76,6 +82,8 @@ RUN cd bskyweb/ && \
   go mod download && \
   go mod verify
 
+RUN apt-get update && apt-get install --yes build-essential
+
 RUN cd bskyweb/ && \
   go build \
     -v  \
@@ -85,6 +93,9 @@ RUN cd bskyweb/ && \
     ./cmd/bskyweb
 
 FROM debian:bullseye-slim
+
+# Enable multi-platform builds
+ARG TARGETARCH
 
 ENV GODEBUG=netdns=go
 ENV TZ=Etc/UTC
@@ -99,7 +110,7 @@ ENTRYPOINT ["dumb-init", "--"]
 WORKDIR /bskyweb
 COPY --from=build-env /bskyweb /usr/bin/bskyweb
 
-CMD ["/usr/bin/bskyweb"]
+CMD ["/usr/bin/bskyweb", "serve"]
 
 LABEL org.opencontainers.image.source=https://github.com/bluesky-social/social-app
 LABEL org.opencontainers.image.description="bsky.app Web App"
