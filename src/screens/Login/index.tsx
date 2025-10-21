@@ -4,7 +4,7 @@ import {LayoutAnimationConfig} from 'react-native-reanimated'
 import {msg} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 
-import {DEFAULT_SERVICE} from '#/lib/constants'
+import {DEFAULT_SERVICE, NORTHSKY_SERVICE} from '#/lib/constants'
 import {logEvent} from '#/lib/statsig/statsig'
 import {logger} from '#/logger'
 import {useServiceQuery} from '#/state/queries/service'
@@ -40,7 +40,7 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
 
   const [error, setError] = React.useState<string>('')
   const [serviceUrl, setServiceUrl] = React.useState<string>(
-    requestedAccount?.service || DEFAULT_SERVICE,
+    requestedAccount?.service || NORTHSKY_SERVICE,
   )
   const [initialHandle, setInitialHandle] = React.useState<string>(
     requestedAccount?.handle || '',

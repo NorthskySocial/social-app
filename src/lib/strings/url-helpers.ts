@@ -2,7 +2,7 @@ import {AtUri} from '@atproto/api'
 import psl from 'psl'
 import TLDs from 'tlds'
 
-import {BSKY_SERVICE} from '#/lib/constants'
+import {BSKY_SERVICE, NORTHSKY_SERVICE} from '#/lib/constants'
 import {isInvalidHandle} from '#/lib/strings/handles'
 import {startUriToStarterPackUri} from '#/lib/strings/starter-pack'
 import {logger} from '#/logger'
@@ -54,6 +54,9 @@ export function toNiceDomain(url: string): string {
     const urlp = new URL(url)
     if (`https://${urlp.host}` === BSKY_SERVICE) {
       return 'Bluesky Social'
+    }
+    if (`http://${urlp.host}` === NORTHSKY_SERVICE) {
+      return 'Northsky Social'
     }
     return urlp.host ? urlp.host : url
   } catch (e) {
