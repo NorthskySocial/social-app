@@ -7,30 +7,30 @@ MuseoModerno is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
-  MuseoModerno/MuseoModerno-VariableFont_wght.ttf
-  MuseoModerno/MuseoModerno-Italic-VariableFont_wght.ttf
+  MuseoModerno-VariableFont_wght.ttf
+  MuseoModerno-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for MuseoModerno:
-  MuseoModerno/static/MuseoModerno-Thin.ttf
-  MuseoModerno/static/MuseoModerno-ExtraLight.ttf
-  MuseoModerno/static/MuseoModerno-Light.ttf
-  MuseoModerno/static/MuseoModerno-Regular.ttf
-  MuseoModerno/static/MuseoModerno-Medium.ttf
-  MuseoModerno/static/MuseoModerno-SemiBold.ttf
-  MuseoModerno/static/MuseoModerno-Bold.ttf
-  MuseoModerno/static/MuseoModerno-ExtraBold.ttf
-  MuseoModerno/static/MuseoModerno-Black.ttf
-  MuseoModerno/static/MuseoModerno-ThinItalic.ttf
-  MuseoModerno/static/MuseoModerno-ExtraLightItalic.ttf
-  MuseoModerno/static/MuseoModerno-LightItalic.ttf
-  MuseoModerno/static/MuseoModerno-Italic.ttf
-  MuseoModerno/static/MuseoModerno-MediumItalic.ttf
-  MuseoModerno/static/MuseoModerno-SemiBoldItalic.ttf
-  MuseoModerno/static/MuseoModerno-BoldItalic.ttf
-  MuseoModerno/static/MuseoModerno-ExtraBoldItalic.ttf
-  MuseoModerno/static/MuseoModerno-BlackItalic.ttf
+  static/MuseoModerno-Thin.ttf
+  static/MuseoModerno-ExtraLight.ttf
+  static/MuseoModerno-Light.ttf
+  static/MuseoModerno-Regular.ttf
+  static/MuseoModerno-Medium.ttf
+  static/MuseoModerno-SemiBold.ttf
+  static/MuseoModerno-Bold.ttf
+  static/MuseoModerno-ExtraBold.ttf
+  static/MuseoModerno-Black.ttf
+  static/MuseoModerno-ThinItalic.ttf
+  static/MuseoModerno-ExtraLightItalic.ttf
+  static/MuseoModerno-LightItalic.ttf
+  static/MuseoModerno-Italic.ttf
+  static/MuseoModerno-MediumItalic.ttf
+  static/MuseoModerno-SemiBoldItalic.ttf
+  static/MuseoModerno-BoldItalic.ttf
+  static/MuseoModerno-ExtraBoldItalic.ttf
+  static/MuseoModerno-BlackItalic.ttf
 
 Get started
 -----------

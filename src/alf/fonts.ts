@@ -1,7 +1,7 @@
-import {TextStyle} from 'react-native'
+import {type TextStyle} from 'react-native'
 
 import {isAndroid, isWeb} from '#/platform/detection'
-import {Device, device} from '#/storage'
+import {type Device, device} from '#/storage'
 
 const WEB_FONT_FAMILIES = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`
 
@@ -64,7 +64,7 @@ export function applyFonts(style: TextStyle, fontFamily: 'system' | 'theme') {
       delete style.fontWeight
       delete style.fontStyle
     } else {
-      style.fontFamily = 'InterVariable'
+      style.fontFamily = 'GeistVariable'
 
       if (style.fontStyle === 'italic') {
         style.fontFamily += 'Italic'

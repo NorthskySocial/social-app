@@ -1,10 +1,10 @@
-# deer.social
+# northsky.social
 
-This is a soft fork of [social app](https://github.com/bluesky-social/social-app).
+This is a soft fork of [deer social](https://github.com/a-viv-a/deer-social).
 
 Get the app itself:
 
-- **Web: [deer.social](https://deer.social)**
+- **Web: [northsky.social](https://northsky.app)**
 - ~**iOS: [App Store]()**~ WIP
 - ~**Android: [Play Store]()**~ WIP
 
@@ -21,15 +21,12 @@ Get the app itself:
 
 ### WIP/Planned
 
-- rewrite shared URLs to reference deer.social
-- opengraph support for sharing posts and profiles
-- selecting custom appviews
-- seeing past blocks in post threads (nuclear block for reply chains)
+
 
 ## Philosophy
 
-- by default, deer.social should very similar to the official client
-  - color and branding are different to distinguish from social-app
+- by default, northsky should very similar to the official client
+  - color and branding are different to distinguish from social-app and deer.social
   - `!no-unauthenticated` behavior is different
   - analytics are not present
 - opinionated features behind toggles
@@ -58,7 +55,7 @@ Deer is a fork of the official client, social-app. It encompasses a set of schem
 
 ## Contributions
 
-> deer.social is a community fork, and we'd love to merge your PR!
+> northsky.app is a community fork, and we'd love to merge your PR!
 
 As a rule of thumb, the best features for deer.social are ones that have a disproportionately positive impact on the user experience compared to the matinance overhead.
 Unlike some open source projects, since deer.social is a soft fork, any features (patches) we add on top of upstream social-app need to be maintained. For example,
@@ -87,7 +84,7 @@ Just like social-app, you have our blessing 🪄✨ to fork this application! Ho
 
 Please be sure to:
 
-- Change all branding in the repository and UI to clearly differentiate from deer.social.
+- Change all branding in the repository and UI to clearly differentiate from Northsky.
 - Change any support links (feedback, email, terms of service, issue tracker, etc) to your own systems.
 
 ## Self hosting & personal builds
@@ -95,13 +92,6 @@ Please be sure to:
 Self hosting is great! It is our intention that deer.social is easy to self host and build on your own. If you host your own instance of deer.social, or make your own builds, please
 make some level of effort to clarify that it is not an "official" build or instance. This can be in the form of a different domain or branding, but can also be as simple as not
 advertising your hosted instance or builds as "official" releases. 
-
-## Security disclosures
-
-If you discover any security issues, please send an email to aviva@rubenfamily.com.
-If the issue pertains to infastructure, code, or systems outside the scope of deer.social, please refer to the
-[disclosure guidelines on social-app](https://github.com/bluesky-social/social-app#security-disclosures) if it is hosted by Bluesky PBC. Otherwise, reference the
-security policy of that system as applicable <3
 
 ## License (MIT)
 
