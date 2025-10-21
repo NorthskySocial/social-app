@@ -67,7 +67,7 @@ export function createThemes({
     primary_200: '#46D0C7',
     primary_300: '#51BFCB',
     primary_400: '#5CAED0',
-    primary_500: '#6899D6',
+    primary_500: '#9A45EC', //yeaah this was the accent color the whole time
     primary_600: '#7484DB',
     primary_700: '#836CE1',
     primary_800: '#9154E8',
