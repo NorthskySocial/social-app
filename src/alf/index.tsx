@@ -26,6 +26,8 @@ export type Alf = {
   themeName: ThemeName
   theme: Theme
   themes: ReturnType<typeof createThemes>
+  customTheme?: Theme //CUSTOM THEME
+  setCustomTheme?: (theme: Theme) => void //CUSTOM THEME
   fonts: {
     scale: Exclude<Device['fontScale'], undefined>
     scaleMultiplier: number
@@ -52,6 +54,8 @@ export const Context = React.createContext<Alf>({
       positive: GREEN_HUE,
     },
   }),
+  customTheme: undefined, //CUSTOM THEME
+  setCustomTheme: () => {}, //CUSTOM THEME
   fonts: {
     scale: getFontScale(),
     scaleMultiplier: computeFontScaleMultiplier(getFontScale()),
@@ -66,6 +70,21 @@ export function ThemeProvider({
   children,
   theme: themeName,
 }: React.PropsWithChildren<{theme: ThemeName}>) {
+  const [customTheme, setCustomTheme] = React.useState<Theme | undefined>(() => {
+    const baseTheme = createThemes({
+      hues: {
+        primary: BLUE_HUE,
+        negative: RED_HUE,
+        positive: GREEN_HUE,
+      },
+    }).dark;
+    return {
+      ...baseTheme,
+      palette: {
+        ...baseTheme.palette,
+      },
+    };
+  })
   const [fontScale, setFontScale] = React.useState<Alf['fonts']['scale']>(() =>
     getFontScale(),
   )
@@ -108,7 +127,9 @@ export function ThemeProvider({
     () => ({
       themes,
       themeName: themeName,
-      theme: themes[themeName] || themes.dark,
+      theme: customTheme || themes[themeName] || themes.dark, //CUSTOM THEME
+      customTheme, //CUSTOM THEME
+      setCustomTheme, //CUSTOM THEME
       fonts: {
         scale: fontScale,
         scaleMultiplier: fontScaleMultiplier,
@@ -126,6 +147,8 @@ export function ThemeProvider({
       fontFamily,
       setFontFamilyAndPersist,
       fontScaleMultiplier,
+      customTheme, //CUSTOM THEME
+      setCustomTheme, //CUSTOM THEME
     ],
   )
 
