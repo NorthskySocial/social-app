@@ -3,8 +3,8 @@
 
 <https://oembed.com/>
 
-* URL scheme: `https://bsky.app/profile/*/post/*`
-* API endpoint: `https://embed.bsky.app/oembed`
+* URL scheme: `https://northsky.app/profile/*/post/*`
+* API endpoint: `https://embed.northsky.app/oembed`
 
 Request params:
 
