@@ -1,10 +1,10 @@
 import React, {useCallback, useState} from 'react'
-//import Animated, {
-//  FadeInUp,
-//  FadeOutUp,
-//  LayoutAnimationConfig,
-//  LinearTransition,
-//} from 'react-native-reanimated' //REMOVED FOR ESLINT ERRORS
+import Animated, {
+  FadeInUp,
+  FadeOutUp,
+  LayoutAnimationConfig,
+  LinearTransition,
+} from 'react-native-reanimated' //REMOVED FOR ESLINT ERRORS
 import {msg, Trans} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 
