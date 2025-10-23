@@ -20,7 +20,7 @@ module.exports = function (_config) {
   const IS_DEV = !IS_TESTFLIGHT || !IS_PRODUCTION
 
   const ASSOCIATED_DOMAINS = [
-    'applinks:deer.social',
+    'applinks:northsky.app',
     // When testing local services, enter an ngrok (et al) domain here. It must use a standard HTTP/HTTPS port.
     ...(IS_DEV || IS_TESTFLIGHT ? [] : []),
   ]
@@ -37,8 +37,8 @@ module.exports = function (_config) {
   return {
     expo: {
       version: VERSION,
-      name: 'deer.social',
-      slug: 'deer',
+      name: 'Northsky',
+      slug: 'Northsky',
       scheme: ['bluesky', 'deer'],
       // owner: 'blueskysocial',
       // owner: 'neema.brown',
@@ -50,7 +50,7 @@ module.exports = function (_config) {
       primaryColor: '#4b9b6c',
       ios: {
         supportsTablet: false,
-        bundleIdentifier: 'social.deer',
+        bundleIdentifier: 'app.northsky',
         config: {
           usesNonExemptEncryption: false,
         },
@@ -110,7 +110,7 @@ module.exports = function (_config) {
         entitlements: {
           'com.apple.developer.kernel.increased-memory-limit': true,
           'com.apple.developer.kernel.extended-virtual-addressing': true,
-          'com.apple.security.application-groups': 'group.social.deer',
+          'com.apple.security.application-groups': 'group.app.northsky',
         },
         privacyManifests: {
           NSPrivacyAccessedAPITypes: [
@@ -154,7 +154,7 @@ module.exports = function (_config) {
           backgroundColor: '#4b9b6c',
         },
         googleServicesFile: './google-services.json',
-        package: 'social.deer',
+        package: 'app.northsky',
         intentFilters: [
           {
             action: 'VIEW',
@@ -162,7 +162,7 @@ module.exports = function (_config) {
             data: [
               {
                 scheme: 'https',
-                host: 'deer.social',
+                host: 'northsky.app',
               },
               {
                 scheme: 'https',
@@ -307,55 +307,6 @@ module.exports = function (_config) {
               android: './assets/app-icons/android_icon_default_dark.png',
               prerendered: true,
             },
-
-            /**
-             * Bluesky+ core set
-             */
-            // core_aurora: {
-            //   ios: './assets/app-icons/ios_icon_core_aurora.png',
-            //   android: './assets/app-icons/android_icon_core_aurora.png',
-            //   prerendered: true,
-            // },
-            // core_bonfire: {
-            //   ios: './assets/app-icons/ios_icon_core_bonfire.png',
-            //   android: './assets/app-icons/android_icon_core_bonfire.png',
-            //   prerendered: true,
-            // },
-            // core_sunrise: {
-            //   ios: './assets/app-icons/ios_icon_core_sunrise.png',
-            //   android: './assets/app-icons/android_icon_core_sunrise.png',
-            //   prerendered: true,
-            // },
-            // core_sunset: {
-            //   ios: './assets/app-icons/ios_icon_core_sunset.png',
-            //   android: './assets/app-icons/android_icon_core_sunset.png',
-            //   prerendered: true,
-            // },
-            // core_midnight: {
-            //   ios: './assets/app-icons/ios_icon_core_midnight.png',
-            //   android: './assets/app-icons/android_icon_core_midnight.png',
-            //   prerendered: true,
-            // },
-            // core_flat_blue: {
-            //   ios: './assets/app-icons/ios_icon_core_flat_blue.png',
-            //   android: './assets/app-icons/android_icon_core_flat_blue.png',
-            //   prerendered: true,
-            // },
-            // core_flat_white: {
-            //   ios: './assets/app-icons/ios_icon_core_flat_white.png',
-            //   android: './assets/app-icons/android_icon_core_flat_white.png',
-            //   prerendered: true,
-            // },
-            // core_flat_black: {
-            //   ios: './assets/app-icons/ios_icon_core_flat_black.png',
-            //   android: './assets/app-icons/android_icon_core_flat_black.png',
-            //   prerendered: true,
-            // },
-            // core_classic: {
-            //   ios: './assets/app-icons/ios_icon_core_classic.png',
-            //   android: './assets/app-icons/android_icon_core_classic.png',
-            //   prerendered: true,
-            // },
           },
         ],
         ['expo-screen-orientation', {initialOrientation: 'PORTRAIT_UP'}],
@@ -363,10 +314,10 @@ module.exports = function (_config) {
           'react-native-vision-camera',
           {
             enableLocation: false,
-            cameraPermissionText: 'deer.social needs access to your camera.',
+            cameraPermissionText: 'Northsky needs access to your camera.',
             enableMicrophonePermission: true,
             microphonePermissionText:
-              'deer.social needs access to your microphone.',
+              'Northsky needs access to your microphone.',
           },
         ],
       ].filter(Boolean),

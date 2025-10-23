@@ -26,7 +26,7 @@ async function registerPushToken(
       serviceDid: SERVICE_DID(account.service),
       platform: devicePlatform,
       token: token.data,
-      appId: 'social.deer',
+      appId: 'app.northsky',
     })
     logger.debug('Notifications: Sent push token (init)', {
       tokenType: token.type,
