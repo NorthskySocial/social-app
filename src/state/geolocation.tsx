@@ -23,7 +23,7 @@ const onGeolocationUpdate = (
  * additional mod authorities.
  */
 export const DEFAULT_GEOLOCATION: Device['geolocation'] = {
-  countryCode: 'US',
+  countryCode: 'CA',
 }
 
 /**
