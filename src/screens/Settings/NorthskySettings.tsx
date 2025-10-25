@@ -62,7 +62,7 @@ import {Admonition} from '#/components/Admonition'
 import {Button, ButtonText} from '#/components/Button'
 import * as Dialog from '#/components/Dialog'
 import * as Toggle from '#/components/forms/Toggle'
-import {Atom_Stroke2_Corner0_Rounded as DeerIcon} from '#/components/icons/Atom'
+import {Northsky_Sky_Icon as NorthskyIcon} from '#/components/icons/Sky'
 import {Bell_Stroke2_Corner0_Rounded as BellIcon} from '#/components/icons/Bell'
 import {Eye_Stroke2_Corner0_Rounded as VisibilityIcon} from '#/components/icons/Eye'
 import {Earth_Stroke2_Corner2_Rounded as GlobeIcon} from '#/components/icons/Globe'
@@ -242,7 +242,7 @@ const TrustedVerifiers = (): React.ReactNode => {
   )
 }
 
-export function DeerSettingsScreen({}: Props) {
+export function NorthskySettingsScreen({}: Props) {
   const {_} = useLingui()
 
   const goLinksEnabled = useGoLinksEnabled()

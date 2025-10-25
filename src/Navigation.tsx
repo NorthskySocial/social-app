@@ -100,7 +100,7 @@ import {AccessibilitySettingsScreen} from './screens/Settings/AccessibilitySetti
 import {AccountSettingsScreen} from './screens/Settings/AccountSettings'
 import {AppPasswordsScreen} from './screens/Settings/AppPasswords'
 import {ContentAndMediaSettingsScreen} from './screens/Settings/ContentAndMediaSettings'
-import {DeerSettingsScreen} from './screens/Settings/DeerSettings'
+import {NorthskySettingsScreen} from './screens/Settings/NorthskySettings'
 import {ExternalMediaPreferencesScreen} from './screens/Settings/ExternalMediaPreferences'
 import {FollowingFeedPreferencesScreen} from './screens/Settings/FollowingFeedPreferences'
 import {LanguageSettingsScreen} from './screens/Settings/LanguageSettings'
@@ -355,10 +355,10 @@ function commonScreens(Stack: typeof HomeTab, unreadCountLabel?: string) {
         }}
       />
       <Stack.Screen
-        name="DeerSettings"
-        getComponent={() => DeerSettingsScreen}
+        name="NorthskySettings"
+        getComponent={() => NorthskySettingsScreen}
         options={{
-          title: title(msg`Deer Settings`),
+          title: title(msg`Northsky Settings`),
           requireAuth: true,
         }}
       />

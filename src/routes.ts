@@ -40,7 +40,7 @@ export const router = new Router({
   PreferencesThreads: '/settings/threads',
   PreferencesExternalEmbeds: '/settings/external-embeds',
   AccessibilitySettings: '/settings/accessibility',
-  DeerSettings: '/settings/deer',
+  NorthskySettings: '/settings/northsky',
   AppearanceSettings: '/settings/appearance',
   SavedFeeds: '/settings/saved-feeds',
   // new settings
