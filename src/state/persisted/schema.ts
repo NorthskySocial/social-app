@@ -204,12 +204,7 @@ export const defaults: Schema = {
   deerVerification: {
     enabled: false,
     // https://deer.social/profile/did:plc:p2cp5gopk7mgjegy6wadk3ep/post/3lndyqyyr4k2k
-    trusted: [
-      'did:plc:z72i7hdynmk6r22z27h6tvur',
-      'did:plc:eclio37ymobqex2ncko63h4r',
-      'did:plc:inz4fkbbp7ms3ixufw6xuvdi',
-      'did:plc:b2kutgxqlltwc6lhs724cfwr',
-    ],
+    trusted: ['did:plc:z72i7hdynmk6r22z27h6tvur'],
   },
 }
 

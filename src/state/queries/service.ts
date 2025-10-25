@@ -9,19 +9,31 @@ export function useServiceQuery(serviceUrl: string) {
     queryKey: RQKEY(serviceUrl),
     queryFn: async () => {
       const agent = new BskyAgent({service: serviceUrl})
+
+      // Northsky labeler
+      agent.appLabelers = ['did:plc:p2cxrw3ank4dzs55mpm6ohq4']
+
+      // goodbye bluesky
+      try {
+        await agent.com.atproto.actor.putPreferences({
+          preferences: [
+            {
+              $type: 'app.bsky.actor.defs#labelerPrefs',
+              labelers: [
+                {
+                  did: 'did:plc:p2cxrw3ank4dzs55mpm6ohq4',
+                },
+              ],
+            },
+          ],
+        })
+      } catch (err) {
+        console.warn('Failed to update labeler preferences:', err)
+      }
+
       const res = await agent.com.atproto.server.describeServer()
       return res.data
     },
     enabled: isValidUrl(serviceUrl),
   })
-}
-
-function isValidUrl(url: string) {
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const urlp = new URL(url)
-    return true
-  } catch {
-    return false
-  }
 }
