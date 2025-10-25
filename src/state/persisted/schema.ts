@@ -124,8 +124,7 @@ const schema = z.object({
   hasCheckedForStarterPack: z.boolean().optional(),
   subtitlesEnabled: z.boolean().optional(),
 
-  // deer
-  goLinksEnabled: z.boolean().optional(),
+  // northsky
   constellationEnabled: z.boolean().optional(),
   directFetchRecords: z.boolean().optional(),
   noAppLabelers: z.boolean().optional(),
@@ -193,8 +192,7 @@ export const defaults: Schema = {
   trendingDisabled: false,
   trendingVideoDisabled: false,
 
-  // deer
-  goLinksEnabled: true,
+  // northsky
   constellationEnabled: false,
   directFetchRecords: false,
   noAppLabelers: false,

@@ -16,7 +16,6 @@ import {
 import {isWeb} from '#/platform/detection'
 import {setGeolocation, useGeolocation} from '#/state/geolocation'
 import * as persisted from '#/state/persisted'
-import {useGoLinksEnabled, useSetGoLinksEnabled} from '#/state/preferences'
 import {
   useConstellationEnabled,
   useSetConstellationEnabled,
@@ -244,9 +243,6 @@ const TrustedVerifiers = (): React.ReactNode => {
 
 export function NorthskySettingsScreen({}: Props) {
   const {_} = useLingui()
-
-  const goLinksEnabled = useGoLinksEnabled()
-  const setGoLinksEnabled = useSetGoLinksEnabled()
 
   const constellationEnabled = useConstellationEnabled()
   const setConstellationEnabled = useSetConstellationEnabled()

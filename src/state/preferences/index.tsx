@@ -8,7 +8,6 @@ import {Provider as DeerVerificationProvider} from './deer-verification'
 import {Provider as DirectFetchRecordsProvider} from './direct-fetch-records'
 import {Provider as DisableHapticsProvider} from './disable-haptics'
 import {Provider as ExternalEmbedsProvider} from './external-embeds-prefs'
-import {Provider as GoLinksProvider} from './go-links-enabled'
 import {Provider as HiddenPostsProvider} from './hidden-posts'
 import {Provider as FollowNotificationsProvider} from './hide-follow-notifications'
 import {Provider as InAppBrowserProvider} from './in-app-browser'
@@ -33,7 +32,6 @@ export {
   useExternalEmbedsPrefs,
   useSetExternalEmbedPref,
 } from './external-embeds-prefs'
-export {useGoLinksEnabled, useSetGoLinksEnabled} from './go-links-enabled'
 export * from './hidden-posts'
 export {useLabelDefinitions} from './label-defs'
 export {useLanguagePrefs, useLanguagePrefsApi} from './languages'
@@ -43,7 +41,6 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
   return (
     <LanguagesProvider>
       <AltTextRequiredProvider>
-        <GoLinksProvider>
           <NoAppLabelersProvider>
             <FollowNotificationsProvider>
               <DirectFetchRecordsProvider>
@@ -83,7 +80,6 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
               </DirectFetchRecordsProvider>
             </FollowNotificationsProvider>
           </NoAppLabelersProvider>
-        </GoLinksProvider>
       </AltTextRequiredProvider>
     </LanguagesProvider>
   )
