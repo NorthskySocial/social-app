@@ -118,12 +118,12 @@ function LandingPage() {
   return (
     <main className="w-full min-h-screen flex flex-col items-center gap-8 py-14 px-4 md:pt-32 dark:bg-dimmedBgDarken dark:text-slate-200">
       <Link
-        href="https://bsky.social/about"
+        href="https://northskysocial.com/"
         className="transition-transform hover:scale-110">
         <img src={logo} className="h-10" />
       </Link>
 
-      <h1 className="text-4xl font-bold text-center">Embed a Bluesky Post</h1>
+      <h1 className="text-4xl font-bold text-center">Embed a Northsky Post</h1>
 
       <div className="flex flex-col w-full max-w-[600px] gap-6">
         <input
@@ -148,8 +148,6 @@ function LandingPage() {
             }}
             id="colorModeSelect"
             className="appearance-none bg-[#1F0B35] border w-full rounded-lg text-sm px-3 py-2 dark:bg-dimmedBg dark:border-slate-500">
-            <option value="system">System</option>
-            <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
         </div>

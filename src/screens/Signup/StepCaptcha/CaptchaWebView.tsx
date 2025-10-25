@@ -6,6 +6,8 @@ import {ShouldStartLoadRequest} from 'react-native-webview/lib/WebViewTypes'
 import {SignupState} from '#/screens/Signup/state'
 
 const ALLOWED_HOSTS = [
+  'northsky.social',
+  'northsky.app',
   'bsky.social',
   'bsky.app',
   'staging.bsky.app',

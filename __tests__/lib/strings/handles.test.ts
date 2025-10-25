@@ -2,12 +2,12 @@ import {IsValidHandle, validateServiceHandle} from '#/lib/strings/handles'
 
 describe('handle validation', () => {
   const valid = [
-    ['ali', 'bsky.social'],
-    ['alice', 'bsky.social'],
-    ['a-lice', 'bsky.social'],
-    ['a-----lice', 'bsky.social'],
-    ['123', 'bsky.social'],
-    ['123456789012345678', 'bsky.social'],
+    ['ali', 'northsky.social'],
+    ['alice', 'northsky.social'],
+    ['a-lice', 'northsky.social'],
+    ['a-----lice', 'northsky.social'],
+    ['123', 'northsky.social'],
+    ['123456789012345678', 'northsky.social'],
     ['alice', 'custom-pds.com'],
     ['alice', 'my-custom-pds-with-long-name.social'],
     ['123456789012345678', 'my-custom-pds-with-long-name.social'],
@@ -18,11 +18,11 @@ describe('handle validation', () => {
   })
 
   const invalid = [
-    ['al', 'bsky.social', 'frontLength'],
-    ['-alice', 'bsky.social', 'hyphenStartOrEnd'],
-    ['alice-', 'bsky.social', 'hyphenStartOrEnd'],
-    ['%%%', 'bsky.social', 'handleChars'],
-    ['1234567890123456789', 'bsky.social', 'frontLength'],
+    ['al', 'northsky.social', 'frontLength'],
+    ['-alice', 'northsky.social', 'hyphenStartOrEnd'],
+    ['alice-', 'northsky.social', 'hyphenStartOrEnd'],
+    ['%%%', 'northsky.social', 'handleChars'],
+    ['1234567890123456789', 'northsky.social', 'frontLength'],
     [
       '1234567890123456789',
       'my-custom-pds-with-long-name.social',

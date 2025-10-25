@@ -10,7 +10,7 @@ appId: xyz.blueskyweb.app
     id: "e2eOpenLoggedOutView"
 - tapOn:
     id: "createAccountButton"
-- tapOn: "Bluesky Social"
+- tapOn: "Northsky Social"
 - tapOn:
     id: "customSelectBtn"
 - tapOn:

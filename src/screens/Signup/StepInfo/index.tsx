@@ -90,7 +90,7 @@ export function StepInfo({
       return dispatch({
         type: 'setError',
         value: _(
-          msg`Please choose a 3rd party service host, or sign up on bsky.app.`,
+          msg`Please choose a 3rd party service host, or sign up on northsky.app.`,
         ),
       })
     }
@@ -166,7 +166,7 @@ export function StepInfo({
           <View style={[a.gap_xl]}>
             <Text style={[a.gap_md, a.leading_normal]}>
               <Trans>
-                deer.social is part of the{' '}
+                Northsky is part of the{' '}
                 {
                   <InlineLinkText
                     label={_(msg`ATmosphere`)}
@@ -210,15 +210,12 @@ export function StepInfo({
         {state.serviceUrl === DEFAULT_SERVICE && (
           <Text style={[a.gap_md, a.leading_normal, a.mt_md]}>
             <Trans>
-              Don't have an account provider or an existing Bluesky account? To
-              create a new account on a Bluesky-hosted PDS, sign up through{' '}
+              Don't have an account provider or an existing Northsky account? You can sign up through{' '}
               {
-                <InlineLinkText label={_(msg`bsky.app`)} to="https://bsky.app">
-                  <Trans>bsky.app</Trans>
+                <InlineLinkText label={_(msg`northsky.app`)} to="https://northsky.app">
+                  <Trans>Northsky!</Trans>
                 </InlineLinkText>
               }{' '}
-              first, then return to deer.social and log in with the account you
-              created.
             </Trans>
           </Text>
         )}

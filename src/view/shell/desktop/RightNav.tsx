@@ -122,19 +122,6 @@ export function DesktopRightNav({routeName}: {routeName: string}) {
         </InlineLinkText>
       </Text>
 
-      {kawaii && (
-        <Text style={[t.atoms.text_contrast_medium, {marginTop: 12}]}>
-          <Trans>
-            Logo by{' '}
-            <InlineLinkText
-              label={_(msg`Logo by @sawaratsuki.bsky.social`)}
-              to="/profile/sawaratsuki.bsky.social">
-              @sawaratsuki.bsky.social
-            </InlineLinkText>
-          </Trans>
-        </Text>
-      )}
-
       {!hasSession && leftNavMinimal && (
         <View style={[a.w_full, {height: 32}]}>
           <AppLanguageDropdown style={{marginTop: 0}} />

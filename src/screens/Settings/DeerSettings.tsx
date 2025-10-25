@@ -294,70 +294,13 @@ export function DeerSettingsScreen({}: Props) {
         <Layout.Header.BackButton />
         <Layout.Header.Content>
           <Layout.Header.TitleText>
-            <Trans>Deer</Trans>
+            <Trans>Northsky</Trans>
           </Layout.Header.TitleText>
         </Layout.Header.Content>
         <Layout.Header.Slot />
       </Layout.Header.Outer>
       <Layout.Content>
         <SettingsList.Container>
-          <SettingsList.Group contentContainerStyle={[a.gap_sm]}>
-            <SettingsList.ItemIcon icon={DeerIcon} />
-            <SettingsList.ItemText>
-              <Trans>Redirects</Trans>
-            </SettingsList.ItemText>
-            <Toggle.Item
-              name="use_go_links"
-              label={_(msg`Redirect through go.bsky.app`)}
-              value={goLinksEnabled ?? false}
-              onChange={value => setGoLinksEnabled(value)}
-              style={[a.w_full]}>
-              <Toggle.LabelText style={[a.flex_1]}>
-                <Trans>Redirect through go.bsky.app</Trans>
-              </Toggle.LabelText>
-              <Toggle.Platform />
-            </Toggle.Item>
-          </SettingsList.Group>
-
-          <SettingsList.Group contentContainerStyle={[a.gap_sm]}>
-            <SettingsList.ItemIcon icon={VisibilityIcon} />
-            <SettingsList.ItemText>
-              <Trans>Visibility</Trans>
-            </SettingsList.ItemText>
-            <Toggle.Item
-              name="direct_fetch_records"
-              label={_(
-                msg`Fetch records directly from PDS to see through quote blocks`,
-              )}
-              value={directFetchRecords}
-              onChange={value => setDirectFetchRecords(value)}
-              style={[a.w_full]}>
-              <Toggle.LabelText style={[a.flex_1]}>
-                <Trans>
-                  Fetch records directly from PDS to see contents of blocked and
-                  detatched quotes
-                </Trans>
-              </Toggle.LabelText>
-              <Toggle.Platform />
-            </Toggle.Item>
-            <Toggle.Item
-              name="constellation_fallback"
-              label={_(
-                msg`Fall back to constellation api to find blocked replies`,
-              )}
-              disabled={true}
-              value={constellationEnabled}
-              onChange={value => setConstellationEnabled(value)}
-              style={[a.w_full]}>
-              <Toggle.LabelText style={[a.flex_1]}>
-                <Trans>
-                  TODO: Fall back to constellation api to find blocked replies
-                </Trans>
-              </Toggle.LabelText>
-              <Toggle.Platform />
-            </Toggle.Item>
-          </SettingsList.Group>
-
           <SettingsList.Group contentContainerStyle={[a.gap_sm]}>
             <SettingsList.ItemIcon icon={VerifiedIcon} />
             <SettingsList.ItemText>
@@ -509,14 +452,14 @@ export function DeerSettingsScreen({}: Props) {
             <Toggle.Item
               name="show_link_in_handle"
               label={_(
-                msg`On non-bsky.social handles, show a link to that URL`,
+                msg`On non-northsky.social handles, show a link to that URL`,
               )}
               value={showLinkInHandle}
               onChange={value => setShowLinkInHandle(value)}
               style={[a.w_full]}>
               <Toggle.LabelText style={[a.flex_1]}>
                 <Trans>
-                  On non-bsky.social handles, show a link to that URL
+                  On non-northsky.social handles, show a link to that URL
                 </Trans>
               </Toggle.LabelText>
               <Toggle.Platform />

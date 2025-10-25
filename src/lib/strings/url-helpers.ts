@@ -52,9 +52,6 @@ export function makeRecordUri(
 export function toNiceDomain(url: string): string {
   try {
     const urlp = new URL(url)
-    if (`https://${urlp.host}` === BSKY_SERVICE) {
-      return 'Bluesky Social'
-    }
     if (`http://${urlp.host}` === NORTHSKY_SERVICE) {
       return 'Northsky Social'
     }
