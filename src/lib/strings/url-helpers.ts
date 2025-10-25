@@ -202,7 +202,7 @@ export function convertBskyAppUrlIfNeeded(url: string): string {
     } catch (e) {
       console.error('Unexpected error in convertBskyAppUrlIfNeeded()', e)
     }
-  } else if (isShortLink(url)) {
+  } else {
     // We only want to do this on native, web handles the 301 for us
     return shortLinkToHref(url)
   }
@@ -325,24 +325,7 @@ export function createBskyAppAbsoluteUrl(path: string): string {
   return `${BSKY_APP_HOST.replace(/\/$/, '')}/${sanitizedPath}`
 }
 
-export function createProxiedUrl(url: string): string {
-  let u
-  try {
-    u = new URL(url)
-  } catch {
-    return url
-  }
 
-  if (u?.protocol !== 'http:' && u?.protocol !== 'https:') {
-    return url
-  }
-
-  return `https://go.bsky.app/redirect?u=${encodeURIComponent(url)}`
-}
-
-export function isShortLink(url: string): boolean {
-  return url.startsWith('https://go.bsky.app/')
-}
 
 export function shortLinkToHref(url: string): string {
   try {

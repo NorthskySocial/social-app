@@ -92,11 +92,6 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         return true
       }
       return false
-    case "go.bsky.app":
-      if url.pathComponents.count == 2 {
-        return true
-      }
-      return false
     default:
       return false
     }
