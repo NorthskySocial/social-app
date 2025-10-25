@@ -87,10 +87,8 @@ export function isAppLabeler(
     | AppBskyLabelerDefs.LabelerView
     | AppBskyLabelerDefs.LabelerViewDetailed,
 ): boolean {
-  if (typeof labeler === 'string') {
-    return BskyAgent.appLabelers.includes(labeler)
-  }
-  return BskyAgent.appLabelers.includes(labeler.creator.did)
+  const did = typeof labeler === 'string' ? labeler : labeler.creator.did
+  return did === 'did:plc:p2cxrw3ank4dzs55mpm6ohq4'
 }
 
 export function isLabelerSubscribed(

@@ -3,6 +3,7 @@ import {BskyAgent} from '@atproto/api'
 import {logger} from '#/logger'
 import {device} from '#/storage'
 
+export const CA_LABELER = 'did:plc:p2cxrw3ank4dzs55mpm6ohq4' // Canada
 export const BR_LABELER = 'did:plc:ekitcvx7uwnauoqy5oest3hm' // Brazil
 export const DE_LABELER = 'did:plc:r55ow3tocux5kafs5dq445fy' // Germany
 export const RU_LABELER = 'did:plc:crm2agcxvvlj6hilnjdc4hox' // Russia
@@ -22,6 +23,7 @@ export const EU_LABELER = 'did:plc:z57lz5dhgz2dkjogoysm3vut'
 const MODERATION_AUTHORITIES: {
   [countryCode: string]: string[]
 } = {
+  CA: [CA_LABELER], // Canada
   BR: [BR_LABELER], // Brazil
   RU: [RU_LABELER], // Russia
   GB: [GB_LABELER], // United Kingdom
