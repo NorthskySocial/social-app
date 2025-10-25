@@ -25,9 +25,9 @@ export const colors = {
   blue0: '#b6ffe8ff',
   blue1: '#2AFFBA',
   blue2: '#40DAC4',
-  blue3: '#59B2CF',
+  blue3: '#59B2CF', //notification colors?
   blue4: '#7780DC',
-  blue5: '#9A45EC',
+  blue5: '#2AFFBA', //Bottom of the post button gradient
   blue6: '#1F0B35',
   blue7: '#150724ff',
 
@@ -63,7 +63,7 @@ export const colors = {
 }
 
 export const gradients = {
-  blueLight: {start: '#7780DC', end: colors.blue5}, // buttons
+  blueLight: {start: colors.blue5, end: '#7780DC'}, // buttons
   blue: {start: '#7780DC', end: colors.blue5}, // fab
   blueDark: {start: '#7780DC', end: colors.blue5}, // avis, banner
 }
