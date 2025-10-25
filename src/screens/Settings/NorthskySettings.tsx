@@ -30,10 +30,6 @@ import {
   useSetDeerVerificationEnabled,
 } from '#/state/preferences/deer-verification'
 import {
-  useDirectFetchRecords,
-  useSetDirectFetchRecords,
-} from '#/state/preferences/direct-fetch-records'
-import {
   useHideFollowNotifications,
   useSetHideFollowNotifications,
 } from '#/state/preferences/hide-follow-notifications'
@@ -63,7 +59,6 @@ import * as Dialog from '#/components/Dialog'
 import * as Toggle from '#/components/forms/Toggle'
 import {Northsky_Sky_Icon as NorthskyIcon} from '#/components/icons/Sky'
 import {Bell_Stroke2_Corner0_Rounded as BellIcon} from '#/components/icons/Bell'
-import {Eye_Stroke2_Corner0_Rounded as VisibilityIcon} from '#/components/icons/Eye'
 import {Earth_Stroke2_Corner2_Rounded as GlobeIcon} from '#/components/icons/Globe'
 import {Lab_Stroke2_Corner0_Rounded as BeakerIcon} from '#/components/icons/Lab'
 import {PaintRoller_Stroke2_Corner2_Rounded as PaintRollerIcon} from '#/components/icons/PaintRoller'
@@ -246,9 +241,6 @@ export function NorthskySettingsScreen({}: Props) {
 
   const constellationEnabled = useConstellationEnabled()
   const setConstellationEnabled = useSetConstellationEnabled()
-
-  const directFetchRecords = useDirectFetchRecords()
-  const setDirectFetchRecords = useSetDirectFetchRecords()
 
   const noAppLabelers = useNoAppLabelers()
   const setNoAppLabelers = useSetNoAppLabelers()
