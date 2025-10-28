@@ -126,7 +126,6 @@ const schema = z.object({
 
   // northsky
   constellationEnabled: z.boolean().optional(),
-  directFetchRecords: z.boolean().optional(),
   noAppLabelers: z.boolean().optional(),
   noDiscoverFallback: z.boolean().optional(),
   repostCarouselEnabled: z.boolean().optional(),
@@ -202,7 +201,7 @@ export const defaults: Schema = {
   constellationInstance: 'https://constellation.microcosm.blue/',
   showLinkInHandle: false,
   deerVerification: {
-    enabled: false,
+    enabled: true,
     // https://deer.social/profile/did:plc:p2cp5gopk7mgjegy6wadk3ep/post/3lndyqyyr4k2k
     trusted: ['did:plc:z72i7hdynmk6r22z27h6tvur'],
   },
