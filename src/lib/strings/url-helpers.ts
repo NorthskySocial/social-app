@@ -2,12 +2,12 @@ import {AtUri} from '@atproto/api'
 import psl from 'psl'
 import TLDs from 'tlds'
 
-import {BSKY_SERVICE, NORTHSKY_SERVICE} from '#/lib/constants'
+import {DEFAULT_SERVICE} from '#/lib/constants'
 import {isInvalidHandle} from '#/lib/strings/handles'
 import {startUriToStarterPackUri} from '#/lib/strings/starter-pack'
 import {logger} from '#/logger'
 
-export const BSKY_APP_HOST = 'https://nothsky.app'
+export const BSKY_APP_HOST = 'https://northsky.app'
 const BSKY_TRUSTED_HOSTS = [
   'northskysocial.com',
   'northsky\\.app',
@@ -325,7 +325,24 @@ export function createBskyAppAbsoluteUrl(path: string): string {
   return `${BSKY_APP_HOST.replace(/\/$/, '')}/${sanitizedPath}`
 }
 
+export function createProxiedUrl(url: string): string {
+  let u
+  try {
+    u = new URL(url)
+  } catch {
+    return url
+  }
 
+  if (u?.protocol !== 'http:' && u?.protocol !== 'https:') {
+    return url
+  }
+
+  return `https://go.northsky.app/redirect?u=${encodeURIComponent(url)}`
+}
+
+export function isShortLink(url: string): boolean {
+  return url.startsWith('https://go.northsky.app/')
+}
 
 export function shortLinkToHref(url: string): string {
   try {

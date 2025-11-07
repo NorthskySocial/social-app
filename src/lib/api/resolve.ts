@@ -20,6 +20,7 @@ import {
   isBskyPostUrl,
   isBskyStarterPackUrl,
   isBskyStartUrl,
+  isShortLink,
 } from '#/lib/strings/url-helpers'
 import {ComposerImage} from '#/state/gallery'
 import {createComposerImage} from '#/state/gallery'

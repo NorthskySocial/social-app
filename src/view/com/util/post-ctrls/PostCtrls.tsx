@@ -401,12 +401,12 @@ let PostCtrls = ({
               color: t.palette.contrast_400,
               fontSize: 7,
             }}>
-            {feedContext}
-          </Text>
+            Debug
+          </Text> 
         </Pressable>
       )}
     </View>
   )
-}
+}//this ^ is what sets the debug uri text.
 PostCtrls = memo(PostCtrls)
 export {PostCtrls}

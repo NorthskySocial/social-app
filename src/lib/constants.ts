@@ -9,9 +9,9 @@ export const PUBLIC_BSKY_SERVICE = 'https://public.api.bsky.app'
 export const DEFAULT_SERVICE = BSKY_SERVICE
 export const NORTHSKY_SERVICE = 'https://northsky.social'
 export const HELP_DESK_URL = `https://github.com/NorthskySocial/social-app/issues/`
-export const EMBED_SERVICE = 'https://embed.bsky.app'
+export const EMBED_SERVICE = 'https://embed.northsky.app'
 export const EMBED_SCRIPT = `${EMBED_SERVICE}/static/embed.js`
-export const BSKY_DOWNLOAD_URL = 'https://bsky.app/download'
+export const BSKY_DOWNLOAD_URL = 'https://northsky.app/download'
 export const STARTER_PACK_MAX_SIZE = 150
 
 // HACK
@@ -63,18 +63,18 @@ export function IS_PROD_SERVICE(url?: string) {
 }
 
 export const PROD_DEFAULT_FEED = (rkey: string) =>
-  `at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/${rkey}`
+  `at://did:plc:23cnpffmuf4vkpsnwhgyvljw/app.bsky.feed.generator/NorthskySocial`
 
 export const STAGING_DEFAULT_FEED = (rkey: string) =>
-  `at://did:plc:yofh3kx63drvfljkibw5zuxo/app.bsky.feed.generator/${rkey}`
+  `at://did:plc:23cnpffmuf4vkpsnwhgyvljw/app.bsky.feed.generator/NorthskySocial`
 
 export const PROD_FEEDS = [
-  `feedgen|${PROD_DEFAULT_FEED('whats-hot')}`,
+  `feedgen|${PROD_DEFAULT_FEED('Discover')}`,
   `feedgen|${PROD_DEFAULT_FEED('thevids')}`,
 ]
 
 export const STAGING_FEEDS = [
-  `feedgen|${STAGING_DEFAULT_FEED('whats-hot')}`,
+  `feedgen|${STAGING_DEFAULT_FEED('Discover')}`,
   `feedgen|${STAGING_DEFAULT_FEED('thevids')}`,
 ]
 
@@ -116,7 +116,7 @@ export const LANG_DROPDOWN_HITSLOP = {top: 10, bottom: 10, left: 4, right: 4}
 export const BACK_HITSLOP = HITSLOP_30
 export const MAX_POST_LINES = 25
 
-export const BSKY_APP_ACCOUNT_DID = 'did:plc:z72i7hdynmk6r22z27h6tvur'
+export const BSKY_APP_ACCOUNT_DID = 'did:plc:23cnpffmuf4vkpsnwhgyvljw/'
 
 export const BSKY_FEED_OWNER_DIDS = [
   BSKY_APP_ACCOUNT_DID,
@@ -125,7 +125,7 @@ export const BSKY_FEED_OWNER_DIDS = [
 ]
 
 export const DISCOVER_FEED_URI =
-  'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/whats-hot'
+  'at://did:plc:23cnpffmuf4vkpsnwhgyvljw/app.bsky.feed.generator/NorthskySocial'
 export const VIDEO_FEED_URI =
   'at://did:plc:z72i7hdynmk6r22z27h6tvur/app.bsky.feed.generator/thevids'
 export const STAGING_VIDEO_FEED_URI =

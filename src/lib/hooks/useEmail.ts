@@ -1,7 +1,7 @@
 import {useServiceConfigQuery} from '#/state/queries/email-verification-required'
 import {useProfileQuery} from '#/state/queries/profile'
 import {useSession} from '#/state/session'
-import {BSKY_SERVICE} from '../constants'
+import {DEFAULT_SERVICE} from '../constants'
 import {getHostnameFromUrl} from '../strings/url-helpers'
 
 export function useEmail() {
@@ -20,7 +20,7 @@ export function useEmail() {
   const isSelfHost =
     currentAccount &&
     getHostnameFromUrl(currentAccount.service) !==
-      getHostnameFromUrl(BSKY_SERVICE)
+      getHostnameFromUrl(DEFAULT_SERVICE)
 
   const needsEmailVerification =
     !isSelfHost &&

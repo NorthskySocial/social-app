@@ -9,7 +9,7 @@ import {
   SupportedMimeTypes,
   VIDEO_MAX_DURATION_MS,
 } from '#/lib/constants'
-import {BSKY_SERVICE} from '#/lib/constants'
+import {DEFAULT_SERVICE} from '#/lib/constants'
 import {useVideoLibraryPermission} from '#/lib/hooks/usePermissions'
 import {getHostnameFromUrl} from '#/lib/strings/url-helpers'
 import {isWeb} from '#/platform/detection'
@@ -45,7 +45,7 @@ export function SelectVideoBtn({onSelectVideo, disabled, setError}: Props) {
       currentAccount &&
       !currentAccount.emailConfirmed &&
       getHostnameFromUrl(currentAccount.service) ===
-        getHostnameFromUrl(BSKY_SERVICE)
+        getHostnameFromUrl(DEFAULT_SERVICE)
     ) {
       Keyboard.dismiss()
       control.open()

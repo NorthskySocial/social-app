@@ -17,10 +17,9 @@ import {Post} from '../components/post'
 import {niceDate} from '../utils'
 
 const DEFAULT_POST = 'https://bsky.app/profile/emilyliu.me/post/3jzn6g7ixgq2y'
-const DEFAULT_URI =
-  'at://did:plc:vjug55kidv6sye7ykr5faxxn/app.bsky.feed.post/3jzn6g7ixgq2y'
+const DEFAULT_URI = 'at://did:plc:23cnpffmuf4vkpsnwhgyvljw/app.bsky.feed.generator/NorthskySocial'
 
-export const EMBED_SERVICE = 'https://embed.bsky.app'
+export const EMBED_SERVICE = 'https://embed.northsky.app'
 export const EMBED_SCRIPT = `${EMBED_SERVICE}/static/embed.js`
 
 const root = document.getElementById('app')
@@ -83,7 +82,7 @@ function LandingPage() {
               atUri = `at://${did}/app.bsky.feed.post/${rkey}`
             } catch (err) {
               console.log(err)
-              throw new Error('Invalid Bluesky URL')
+              throw new Error('Invalid Northsky URL')
             }
           }
         }
@@ -284,7 +283,7 @@ function Snippet({
 }
 
 function toShareUrl(path: string) {
-  return `https://bsky.app${path}?ref_src=embed`
+  return `https://northsky.app${path}?ref_src=embed`
 }
 
 /**
